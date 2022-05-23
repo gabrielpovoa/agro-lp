@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    outline: none;
+    border: none;
+    transition: all .3s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:root {
+    --green: #3ebe32;
+    --green-font: #03C03C;
+    --yellow-font: #FDFD96;
+    --white: #FFF;
+    --brow: #C0A880;
+    --black: #222;
+    --box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --padding: .6rem 1rem;
+    --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+}
+
+#mobile {
+    color: var(--green-font);
+    font-size: 3rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: var(--white);
+}
+
+.yellow-font {
+    color: var(--yellow-font);
+}
+
+.contact {
+    border: 2px solid var(--green);
+    padding: var(--padding);
+    border-radius: .3rem;
+    cursor: pointer;
+    color: var(--green-font);
+    font-weight: 500;
+}
+
+.contact:hover {
+    background-color: var(--green);
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+header {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 2rem 5%;
+}
+
+.header .navbar {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 6rem;
+    height: 8rem;
+}
+
+.header .navbar .logo img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.header .navbar .menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .navbar .menu ul li {
+    padding: var(--padding);
+}
+
+.header .navbar .menu ul li a {
+    color: var(--green-font);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.header .navbar .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.country {
+    background-color: #F3F3F3;
+    border-radius: .3rem;
+    box-shadow: var(--box-shadow);
+    padding: var(--padding);
+    cursor: pointer;
+}
+
+.country-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-content img {
+    width: 3rem;
+    height: 2rem;
+    object-fit: cover;
+    margin-right: 1.2rem;
+}
+
+.home {
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 20rem);
+    position: relative;
+}
+
+.home .bottom {
+    background-color: #03C03C10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 3rem;
+}
+
+.home .bottom .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.home .bottom .content h1 {
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.home .bottom .content h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.home .bottom .button {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 13rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    border-top: .3rem;
+}
+
+.home .bottom .button:hover {
+    opacity: 0.5;
+}
+
+.home .bottom .button a {
+    color: var(--green);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.agro-family {
+    margin-top: 4rem;
+    border-radius: .3rem;
+    max-width: 1700px;
+    margin: 4rem auto;
+}
+
+.agro-family .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5%;
+}
+
+.agro-family .box-container .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@keyframes agroImage {
+    0%,
+    100% {
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+    0% {
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
+}
+
+.agro-family .box-container .box .image {
+    width: 80rem;
+    height: 40rem;
+}
+
+.agro-family .box-container .box .image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .4rem;
+    animation: agroImage 4s linear infinite;
+}
+
+.content-box {
+    margin-left: 3rem;
+    padding: var(--padding);
+    width: 80rem;
+}
+
+.content-box h1 {
+    font-size: 5rem;
+    color: var(--green-font);
+}
+
+.content-box h2 {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.content-box p {
+    line-height: 3rem;
+    font-size: 2rem;
+    color: #2C2C2C;
+}
+
+.content-box button {
+    max-width: 40rem;
+    width: 100%;
+    display: inline;
+    margin-top: 2rem;
+    padding: 1rem .8rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    background-color: var(--green-font);
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.content-box button:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 2rem;
+    }
+    #mobile {
+        display: initial;
+    }
+    .header .navbar .menu ul {
+        background-color: var(--green-font);
+        position: absolute;
+        top: 12rem;
+        left: 0;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
+        height: 78vh;
+        clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+        border-top: .3rem solid var(--black);
+    }
+    .header .navbar .menu ul li a {
+        color: var(--white);
+    }
+    .header .navbar .menu ul li:hover a {
+        margin-left: 3rem;
+    }
+    .header .navbar .menu.active ul {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    .home .bottom {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .home .bottom .content {
+        text-align: center;
+        padding: var(--padding);
+    }
+    .home .bottom .button {
+        margin-left: 0;
+    }
+    .agro-family .box-container .box {
+        flex-direction: column;
+    }
+    .content-box {
+        margin-left: 0;
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .agro-family .box-container {
+        padding: 2rem;
+    }
+    .content-box {
+        max-width: 500px;
+        width: 100%;
+    }
+    .agro-family .box-container .box .image {
+        width: 400px;
+        height: 400px;
+    }
+    .agro-family .box-container .box .image img {
+        height: 100%;
+    }
+    .content-box h1 {
+        font-size: 3rem;
+    }
+}
