@@ -241,12 +241,12 @@ header {
     width: 80rem;
 }
 
-.content-box h1 {
+.content-box .headings h1 {
     font-size: 5rem;
     color: var(--green-font);
 }
 
-.content-box h2 {
+.content-box .headings h2 {
     font-size: 3rem;
     color: var(--black);
     margin-bottom: 2rem;
@@ -259,8 +259,8 @@ header {
 }
 
 .content-box button {
-    max-width: 40rem;
     width: 100%;
+    max-width: 70vw;
     display: inline;
     margin-top: 2rem;
     padding: 1rem .8rem;
@@ -327,6 +327,7 @@ header {
     .content-box {
         margin-left: 0;
         margin-top: 4rem;
+        max-width: 600px;
     }
 }
 
@@ -338,8 +339,15 @@ header {
         padding: 2rem;
     }
     .content-box {
-        max-width: 500px;
-        width: 100%;
+        width: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .headings {
+        text-align: start;
+        margin-left: 2rem;
     }
     .agro-family .box-container .box .image {
         width: 400px;
@@ -348,7 +356,14 @@ header {
     .agro-family .box-container .box .image img {
         height: 100%;
     }
-    .content-box h1 {
+    .content-box .headings h1 {
         font-size: 3rem;
+    }
+    .content-box p {
+        text-align: start;
+        margin-left: 2rem;
+    }
+    .content-box button {
+        margin-left: 2rem;
     }
 }
